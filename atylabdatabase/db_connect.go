@@ -1,4 +1,4 @@
-package database
+package atylabdatabase
 
 import (
 	"fmt"
