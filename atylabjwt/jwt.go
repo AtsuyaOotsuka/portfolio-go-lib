@@ -35,7 +35,7 @@ type JwtConfig struct {
 
 func (s *JwtSvcStruct) CreateJwt(config *JwtConfig) (string, error) {
 	claims := jwt.MapClaims{
-		"sub":   fmt.Sprintf("user%s", config.Uuid),
+		"sub":   config.Uuid,
 		"email": config.Email,
 		"exp":   config.Exp.Add(time.Hour * 1).Unix(),
 	}
